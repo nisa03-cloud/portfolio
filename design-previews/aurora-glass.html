@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concept C — Aurora Glass</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Satoshi:wght@700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080A12;color:#E2E8F0;font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden;position:relative}
+body::before{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(600px at 20% 10%,rgba(42,79,255,0.25),transparent),radial-gradient(800px at 80% 20%,rgba(124,58,237,0.25),transparent),radial-gradient(700px at 50% 90%,rgba(6,182,214,0.18),transparent),#080A12}
+.glass{background:rgba(255,255,255,0.06);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.1);border-radius:24px}
+.layout{display:grid;grid-template-columns:80px 1fr 380px;gap:1.2rem;max-width:1440px;margin:0 auto;padding:1.2rem}
+@media(max-width:1100px){.layout{grid-template-columns:1fr;}.side{flex-direction:row;justify-content:space-between}.side .nav{display:flex;gap:1rem}}
+.side{padding:1rem 0.6rem;display:flex;flex-direction:column;align-items:center;gap:1rem;height:calc(100vh - 2.4rem);position:sticky;top:1.2rem}
+.logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#2A4FFF,#7C3AED);display:flex;align-items:center;justify-content:center;font-weight:700}
+.nav-item{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#94A3B8;text-decoration:none}
+.nav-item.active{background:rgba(255,255,255,0.1);color:white}
+.main{display:flex;flex-direction:column;gap:1.2rem}
+.hero{padding:2.2rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-60px;top:-40px;width:320px;height:320px;background:radial-gradient(circle at center,rgba(124,58,237,0.6),rgba(42,79,255,0.4),transparent 70%);border-radius:50%;filter:blur(20px)}
+.badge{display:inline-flex;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);padding:6px 12px;border-radius:100px;font-size:11px;letter-spacing:0.05em;margin-bottom:1.5rem;gap:6px;align-items:center}
+.badge i{width:8px;height:8px;background:#10B981;border-radius:50%;display:inline-block}
+.h1{font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.1;letter-spacing:-0.03em}
+.gradient{background:linear-gradient(90deg,#7DD3FC,#A78BFA,#F472B6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.desc{color:#94A3B8;margin-top:1rem;line-height:1.6;max-width:460px;font-size:14px}
+.ctas{margin-top:1.6rem;display:flex;gap:0.8rem}
+.btn-primary{background:linear-gradient(135deg,#8B5CF6,#2A4FFF);border:none;border-radius:100px;padding:0.8rem 1.4rem;color:white;font-weight:600;font-size:13px;cursor:pointer}
+.btn-sec{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:0.8rem 1.2rem;color:white;font-size:13px}
+.bento{display:grid;grid-template-columns:1.5fr 1fr;gap:1.2rem}
+.card{padding:1.4rem}
+.card h3{font-size:14px;font-weight:600;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
+.right-col{display:flex;flex-direction:column;gap:1.2rem}
+.stack{display:flex;flex-wrap:wrap;gap:0.6rem}
+.tech{width:68px;height:68px;border-radius:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;color:#94A3B8}
+.tech i{font-size:22px}
+.proj-preview{background:#0F1220;border-radius:12px;padding:1rem;border:1px solid rgba(255,255,255,0.06);display:flex;gap:1rem}
+.proj-preview img{width:160px;height:100px;object-fit:cover;border-radius:8px;background:#1a1a2e}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0.8rem}
+.stat{padding:1rem;text-align:center}
+.stat .v{font-size:1.2rem;font-weight:700}
+.stat .l{font-size:10px;color:#64748B;margin-top:2px}
+.orb{position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,#2A4FFF66,#7C3AED66);filter:blur(30px);pointer-events:none}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+</head>
+<body>
+<div class="layout">
+<div class="glass side"><div class="logo">N</div><div style="flex:1;display:flex;flex-direction:column;gap:0.6rem" class="nav"><a class="nav-item active">⌂</a><a class="nav-item">◈</a><a class="nav-item">⧉</a><a class="nav-item">⚙</a><a class="nav-item">✉</a></div><div class="glass" style="width:40px;height:40px;border-radius:100px;display:flex;align-items:center;justify-content:center">◐</div></div>
+
+<div class="main">
+<div class="glass hero"><div class="badge"><i></i>Available for work</div><div class="h1">Crafting digital <span class="gradient">experiences that inspire & perform</span></div><div class="desc">Computer Science student @ University of Sri Jayewardenepura. Building polished, purposeful software — from AI-powered mobile apps to full-stack web experiences. Undergraduate Student passionate about coding.</div><div class="ctas"><button class="btn-primary">View my work →</button><button class="btn-sec">Get in touch ●</button></div><div class="orb" style="right:40px;top:60px"></div></div>
+
+<div class="bento">
+<div class="glass card"><h3>📁 Featured project</h3><div class="proj-preview"><div style="flex:1"><div style="font-size:11px;color:#64748B">Nebula</div><div style="font-weight:600;margin:0.4rem 0">AI Notes Summarizer</div><div style="font-size:12px;color:#94A3B8;line-height:1.5">Flutter app capturing notes via OCR (Google ML Kit) and summarising with Gemini 2.5 Flash. Dark-themed UI + PDF export.</div><div style="margin-top:0.8rem;display:flex;gap:0.4rem"><span style="font-size:10px;padding:3px 8px;border-radius:100px;background:rgba(255,255,255,0.08)">Flutter</span><span style="font-size:10px;padding:3px 8px;border-radius:100px;background:rgba(255,255,255,0.08)">Gemini API</span></div></div><div style="width:140px;height:110px;border-radius:12px;background:linear-gradient(135deg,#1a1612,#2a2218);display:flex;align-items:center;justify-content:center;font-size:2rem">📝</div></div></div>
+
+<div class="glass card"><h3>💼 Experience</h3><div style="font-size:12px;line-height:1.9"><div style="display:flex;justify-content:space-between"><span><strong>Computer Science</strong><br><span style="color:#64748B">Univ. of Sri Jayewardenepura</span></span><span style="color:#64748B">2024 — Present</span></div><div style="display:flex;justify-content:space-between;margin-top:0.8rem"><span><strong>G.C.E Advanced Level</strong><br><span style="color:#64748B">Ananda College</span></span><span style="color:#64748B">2020-2022</span></div><button style="margin-top:1rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:6px 12px;color:white;font-size:11px">Download CV ↓</button></div></div>
+</div>
+
+<div class="glass card"><h3>Projects Bento</h3><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem;margin-top:0.5rem"><div style="padding:1rem;background:rgba(255,255,255,0.04);border-radius:12px"><div>✈️</div><div style="font-size:12px;font-weight:600;margin-top:0.5rem">Airline Reservation</div><div style="font-size:10px;color:#64748B;margin-top:0.3rem">Java + JDBC</div></div><div style="padding:1rem;background:rgba(255,255,255,0.04);border-radius:12px"><div>🍛</div><div style="font-size:12px;font-weight:600;margin-top:0.5rem">Food Ordering</div><div style="font-size:10px;color:#64748B;margin-top:0.3rem">Java + DS</div></div><div style="padding:1rem;background:rgba(255,255,255,0.04);border-radius:12px"><div>📦</div><div style="font-size:12px;font-weight:600;margin-top:0.5rem">Inventory Manager</div><div style="font-size:10px;color:#64748B;margin-top:0.3rem">PHP + MySQL</div></div></div></div>
+</div>
+
+<div class="right-col">
+<div class="glass card"><h3>👤 About me</h3><p style="font-size:12px;color:#94A3B8;line-height:1.6">I'm a Computer Science student with a genuine passion for coding. From mobile apps to full-stack web experiences, I enjoy the entire process of building — designing the interface, writing the logic, and seeing it all come together.</p><button class="btn-sec" style="margin-top:1rem;font-size:11px">More about me ↗</button></div>
+<div class="glass card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem"><h3>⚙ Tech stack</h3><span style="font-size:11px;background:rgba(255,255,255,0.06);padding:4px 10px;border-radius:100px">View all</span></div><div class="stack"><div class="tech"><i class="devicon-flutter-plain colored"></i>Flutter</div><div class="tech"><i class="devicon-react-original colored"></i>React</div><div class="tech">N Next.js</div><div class="tech"><i class="devicon-typescript-plain colored"></i>TS</div><div class="tech">~ Tailwind</div><div class="tech"><i class="devicon-java-plain colored"></i>Java</div></div></div>
+<div class="glass card"><h3>✦ What I do</h3><div style="font-size:12px;color:#94A3B8;line-height:1.6;margin-top:0.5rem"><strong style="color:white">Mobile Development</strong><br>Flutter apps with AI integration.<br><br><strong style="color:white">Full-Stack Web</strong><br>React + Node experiences.<br><br><strong style="color:white">UI Engineering</strong><br>Bringing brands to life with polished visuals.</div></div>
+<div class="glass card stats"><div class="stat"><div class="v">4+</div><div class="l">Projects completed</div></div><div class="stat"><div class="v">3+</div><div class="l">Years of learning</div></div><div class="stat"><div class="v">5+</div><div class="l">Happy clients</div></div><div class="stat"><div class="v">3</div><div class="l">Tech stacks</div></div></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Design Proposals - Nisadu</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400&family=Inter:wght@400;600;700&family=Syne:wght@700&family=Space+Mono&family=Satoshi:wght@500;700&family=Fraunces:opsz,wght@9..144,300;9..144,600&display=swap');
+* {box-sizing:border-box;margin:0;padding:0}
+body {background:#111;font-family:'Inter',system-ui;color:#eee;padding:3rem 2rem}
+h1 {font-family:'Instrument Serif',serif;font-size:3.2rem;font-weight:400;margin-bottom:0.5rem}
+.sub {font-family:'Geist Mono';font-size:0.85rem;color:#888;letter-spacing:0.1em;margin-bottom:3rem}
+.grid {display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1280px;margin:0 auto}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card {background:#151515;border:1px solid #222;overflow:hidden;transition:transform .3s}
+.card:hover {transform:translateY(-4px);border-color:#444}
+.card img {width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.card-body {padding:1.5rem}
+.card-body h2 {font-size:1.35rem;margin-bottom:0.4rem}
+.card-body h2 span {font-family:'Geist Mono';font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin-left:0.5rem;vertical-align:middle}
+.card-body p {color:#999;font-size:0.92rem;line-height:1.6;margin-bottom:1.2rem}
+.meta {display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.meta span {font-family:'Geist Mono';font-size:0.6rem;border:1px solid #333;padding:0.25rem 0.5rem;text-transform:uppercase;letter-spacing:0.08em}
+.btns {display:flex;gap:0.6rem}
+.btn {font-family:'Geist Mono';font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.6rem 1rem;border:1px solid #333;text-decoration:none;color:#ccc;transition:.2s}
+.btn.primary {background:#fff;color:#000;border-color:#fff}
+.btn:hover {border-color:#fff;color:#fff}
+.btn.primary:hover {background:transparent;color:#fff}
+.current {max-width:1280px;margin:0 auto 3rem auto;border:1px dashed #333;padding:1.5rem;display:flex;gap:1.5rem;align-items:center}
+.current img {width:240px;aspect-ratio:16/10;object-fit:cover}
+.note {font-family:'Geist Mono';font-size:0.75rem;color:#666;line-height:1.7}
+.note strong {color:#aaa}
+</style>
+</head>
+<body>
+<h1>Portfolio Redesign</h1>
+<p class="sub">4 CONCEPTS — SAME CONTENT, DIFFERENT SOUL — PICK ONE TO APPLY</p>
+
+<div class="current">
+  <div style="flex:1">
+    <div style="font-family:'Geist Mono';font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#555;margin-bottom:0.5rem">Current Design Analysis</div>
+    <div style="font-size:1.1rem;margin-bottom:0.5rem">Dark Luxury Editorial · #0D0B14 · Gold + Violet</div>
+    <div class="note">
+      <strong>Strengths:</strong> Elegant, serif + mono combo, good spacing.<br>
+      <strong>Weaknesses:</strong> Purple tint dates it to 2023, low contrast at times, project cards all look same, no strong personality hook, grain overlay can feel heavy on low-end devices.
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <img src="concept-a-paper-ink.jpg" alt="Paper & Ink">
+    <div class="card-body">
+      <h2>Concept A — Paper & Ink <span>RECOMMENDED FOR UNIQUENESS</span></h2>
+      <div class="meta"><span>#FAF8F5 paper</span><span>Instrument Serif</span><span>List View Projects</span><span>Light Mode</span></div>
+      <p>Stand out by going LIGHT. 90% of student portfolios are dark. This is editorial, print-magazine style with huge serif name, thin 1px borders, and project rows that invert on hover. Feels like an architecture studio.</p>
+      <div class="btns"><a class="btn primary" href="paper-ink.html" target="_blank">Live Preview →</a><a class="btn" href="concept-a-paper-ink.jpg" target="_blank">Full Image</a></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="concept-b-noir-lab.jpg" alt="Noir Lab">
+    <div class="card-body">
+      <h2>Concept B — Noir Lab <span>BRUTALIST DEV</span></h2>
+      <div class="meta"><span>#0A0A0A true black</span><span>Mustard #FFDB58</span><span>Space Mono</span><span>Terminal UI</span></div>
+      <p>For the Computer Science purist. All caps bold headlines, terminal blocks, stats dashboard, yellow accents. Says "I build systems, not just websites." Very memorable for tech recruiters.</p>
+      <div class="btns"><a class="btn primary" href="noir-lab.html" target="_blank">Live Preview →</a><a class="btn" href="concept-b-noir-lab.jpg" target="_blank">Full Image</a></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="concept-c-aurora.jpg" alt="Aurora Glass">
+    <div class="card-body">
+      <h2>Concept C — Aurora Glass <span>TRENDY SAAS</span></h2>
+      <div class="meta"><span>#080A12 navy</span><span>Glass Blur 24px</span><span>Bento Grid</span><span>Gradient Orbs</span></div>
+      <p>2025-26 trend: glassmorphism + aurora gradients + bento boxes. Looks like a product dashboard. Perfect for your AI Flutter app + full-stack projects. Rounded 24px, glowing orbs, Inter + Satoshi.</p>
+      <div class="btns"><a class="btn primary" href="aurora-glass.html" target="_blank">Live Preview →</a><a class="btn" href="concept-c-aurora.jpg" target="_blank">Full Image</a></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="concept-d-monochrome.jpg" alt="Monochrome Studio">
+    <div class="card-body">
+      <h2>Concept D — Monochrome Studio <span>SAFE EVOLUTION</span></h2>
+      <div class="meta"><span>#0F0F10 charcoal</span><span>Champagne #C7B299</span><span>Fraunces Serif</span><span>Horizontal Scroll</span></div>
+      <p>Upgrade of your current style. Remove purple, go warm charcoal + champagne gold, horizontal scrolling project lookbook, refined typography. Most elegant, lowest risk, timeless.</p>
+      <div class="btns"><a class="btn primary" href="monochrome-studio.html" target="_blank">Live Preview →</a><a class="btn" href="concept-d-monochrome.jpg" target="_blank">Full Image</a></div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1280px;margin:3rem auto 0 auto;padding:1.5rem;border:1px solid #222;background:#151515">
+  <div style="font-family:'Geist Mono';font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:#888;margin-bottom:0.8rem">What happens next?</div>
+  <p style="color:#999;font-size:0.95rem;line-height:1.7">Tell me which concept you like (A, B, C, D) or a hybrid like "A layout + D colors". I will then rewrite your actual React files in <code>my_portfolio/frontend/src/</code> – only CSS and component structure, zero content changes – and keep it responsive. Your data.js stays untouched.</p>
+</div>
+</body>
+</html>
