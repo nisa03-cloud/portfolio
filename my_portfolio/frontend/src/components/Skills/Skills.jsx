@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section id="skills" className={styles.section}>
       <div className="section-inner">
-        <FadeIn><p className="section-label">04 — Skills</p></FadeIn>
+        <FadeIn><p className="section-label">05 — Skills</p></FadeIn>
         <FadeIn delay={0.1}><h2 className="section-title">Technical Toolkit</h2></FadeIn>
 
         <div className={styles.grid}>

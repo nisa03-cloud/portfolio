@@ -1,23 +1,19 @@
-// ─────────────────────────────────────────
-//  PORTFOLIO DATA  –  edit this file only
-// ─────────────────────────────────────────
-
 export const OWNER = {
   name: "Nisadu Nimsitha",
   title: "Undergraduate Student",
-  university: "University of Sri Jayewardenepura",
+  university: "University of Sri Jayawardenepura",
   email: "nisadu2003@gmail.com",
   github: "https://github.com/nisa2003-ops",
-  linkedin: "https://www.linkedin.com/in/nisadu-nimsitha-512a24348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", // place your PDF in frontend/public/
-  // avatarUrl: "/avatar.jpg", // uncomment when you have a photo
+  linkedin: "https://www.linkedin.com/in/nisadu-nimsitha-512a24348",
   bio: [
     "I'm a Computer Science student at the University of Sri Jayewardenepura, with a genuine passion for coding and technology. I love turning ideas into real, working software that people can actually use.",
-    "From mobile apps to full-stack web experiences, I enjoy the entire process of building — designing the interface, writing the logic, and seeing it all come together. I'm always exploring new technologies and pushing my skills further.",
+    "From mobile apps to full-stack web experiences, I enjoy the entire process of building, designing the interface, writing the logic, and seeing it all come together. I'm always exploring new technologies and pushing my skills further.",
   ],
   stats: [
     { value: "4+", label: "Projects" },
     { value: "3+", label: "Tech Stacks" },
   ],
+  resumeUrl: "/Nisadu_Nimsitha_CV.pdf"
 };
 
 export const NAV_LINKS = ["About", "Education", "Projects", "Skills", "Contact"];
@@ -69,9 +65,9 @@ export const PROJECTS = [
       "Lanka Travel Planner is an AI-powered trip planning tool that helps you explore Sri Lanka with personalized itineraries, interactive maps, and smart budget estimates.",
     tags: ["React", "Node", "Leaflet", "Gemini API"],
     color: "#c4a8c5",
-    status: "Coming Soon",
+    status: "Completed",
     demo: null,
-    github: "",
+    github: "https://github.com/nisa2003-ops/Lanka-Travel-Planner",
     mockupIcon: "⛰️",
     mockupBg: "linear-gradient(135deg,#180f18,#221522,#180f18)",
   },
@@ -98,8 +94,8 @@ export const STATUS_COLORS = {
 
 export const EDUCATION = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of Sri Jayewardenepura",
+    degree: "BSc(Hons) in Computer Science",
+    institution: "University of Sri Jayawardenepura",
     period: "2024 — Present",
     location: "Nugegoda, Sri Lanka",
     highlights: [
@@ -107,6 +103,9 @@ export const EDUCATION = [
       "Data Structures & Algorithms",
       "Software Engineering",
       "Web Technologies",
+      "Data Analysis",
+      "Inference Statistics",
+      "Linear Algebra",
     ],
   },
   {
@@ -124,10 +123,40 @@ export const EDUCATION = [
     degree: "G.C.E Ordinary Level",
     institution: "St.Peter's College",
     period: "2014-2019",
-    location: "Colombo 10",
+    location: "Colombo 04",
     highlights: [
       "Obtained A pass for all 9 subjects",
     ],
+  },
+];
+
+export const CERTIFICATIONS = [
+  {
+    id: "cert-1",
+    title: "YouTube Labs - Kubernetes Crash Course",
+    platform: "KodeKloud",
+    date: "May 2026",
+    credentialUrl: "https://learn.kodekloud.com/certificate/8a90819f-6656-4cc5-ba1a-1e0103bd7e66",
+    icon: "☸️",
+    color: "#8eafc2",
+  },
+  {
+    id: "cert-2",
+    title: "AWS Academy Graduate - Cloud Foundations",
+    platform: "Amazon Web Services (AWS)",
+    date: "May 2026",
+    credentialUrl: "https://www.credly.com/badges/acd4df5d-898e-49c9-8609-7b883f855d70/linked_in_profile",
+    icon: "☁️",
+    color: "#c9a96e",
+  },
+  {
+    id: "cert-3",
+    title: "Crash Course: Linux For Absolute Beginners",
+    platform: "KodeKloud",
+    date: "May 2026",
+    credentialUrl: "https://learn.kodekloud.com/certificate/16b70d88-49fa-45b6-87ff-315738e5ee4b",
+    icon: "🐧",
+    color: "#a8c5a0",
   },
 ];
 
@@ -169,4 +198,12 @@ export const SKILL_GROUPS = [
       { cls: "devicon-r-plain colored", label: "R" }
     ],
   },
+  {
+  category: "DevOps",
+  icons: [
+    { cls: "devicon-docker-plain colored",     label: "Docker" },
+    { cls: "devicon-kubernetes-plain colored", label: "Kubernetes" },
+    { cls: "devicon-linux-plain colored",      label: "Linux" },
+  ],
+},
 ];

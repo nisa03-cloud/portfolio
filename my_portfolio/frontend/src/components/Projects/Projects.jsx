@@ -79,7 +79,7 @@ export default function Projects() {
   return (
     <section id="projects" className={styles.section}>
       <div className="section-inner">
-        <FadeIn><p className="section-label">03 — Projects</p></FadeIn>
+        <FadeIn><p className="section-label">04 — Projects</p></FadeIn>
         <FadeIn delay={0.1}><h2 className="section-title">Selected Work</h2></FadeIn>
 
         <div className={styles.grid}>
