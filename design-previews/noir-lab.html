@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concept B — Noir Lab</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Mono:wght@400;700&display=swap');
+:root{--bg:#0A0A0A;--surf:#141414;--line:#222;--text:#FFF;--muted:#777;--accent:#FFDB58}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace}
+.grid{max-width:1440px;margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.topbar{display:grid;grid-template-columns:220px 1fr auto;border-bottom:1px solid var(--line);height:48px;align-items:center}
+.logo{padding:0 1rem;font-weight:700;letter-spacing:0.1em;border-right:1px solid var(--line);height:100%;display:flex;align-items:center;gap:0.6rem}
+.logo i{width:8px;height:8px;background:var(--accent);display:inline-block}
+.mono-sm{font-size:11px;letter-spacing:0.06em}
+.hero{border-bottom:1px solid var(--line);padding:3rem 1.5rem 2rem;display:grid;grid-template-columns:220px 1fr;gap:1.5rem}
+.side-nav{border-right:1px solid var(--line);padding:1.2rem}
+.side-nav a{display:block;padding:0.5rem 0;color:var(--muted);text-decoration:none;font-size:12px}
+.side-nav a.active{color:var(--accent)}
+.side-nav a.active::before{content:'> _';}
+.huge{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,6vw,5rem);line-height:0.95;letter-spacing:-0.02em;text-transform:uppercase}
+.huge span{color:var(--accent)}
+.cursor{display:inline-block;width:14px;height:0.9em;background:var(--accent);vertical-align:middle;margin-left:0.2rem;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1.4fr}
+.stat{border-right:1px solid var(--line);padding:1.2rem}
+.stat.last{border-right:none}
+.stat .val{font-family:'Syne';font-size:1.8rem;color:var(--accent)}
+.projects{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+.proj-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.2rem;display:grid;grid-template-columns:120px 1fr;gap:1rem}
+.proj-img{width:100%;height:84px;background:linear-gradient(135deg,#1a1a1a,#2a2a2a);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.tags{color:var(--accent);font-size:10px;margin-top:0.5rem}
+.skills{padding:1.2rem;border-bottom:1px solid var(--line)}
+.skill-group{margin-bottom:1.2rem}
+.skill-group h4{color:var(--accent);font-size:11px;margin-bottom:0.4rem}
+.cta{padding:2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.btn{padding:0.8rem 1.6rem;background:var(--accent);color:#000;text-transform:uppercase;font-weight:700;font-size:12px;border:none;cursor:pointer}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.side-nav{display:none}.stats{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="grid">
+<div class="topbar"><div class="logo"><i></i>NOIR LAB</div><div style="padding:0 1rem;color:var(--muted)" class="mono-sm">// BUILDING DIGITAL EXPERIENCES. SOLVING COMPLEX PROBLEMS.</div><div style="background:var(--accent);color:#000;padding:0 1.2rem;height:100%;display:flex;align-items:center" class="mono-sm">ACCESS: GRANTED</div></div>
+
+<div class="hero">
+<div class="side-nav">
+<a class="active">HOME</a><a>01. ABOUT</a><a>02. STACK</a><a>03. PROJECTS</a><a>04. JOURNAL</a><a>05. CONTACT</a>
+<div style="margin-top:2rem;padding-top:1rem;border-top:1px solid var(--line)"><div class="mono-sm" style="color:var(--muted)">SYSTEM STATUS</div><div class="mono-sm" style="margin-top:0.5rem">MODE: FOCUS<br>UPTIME: 12H 34M<br>LOAD: 0.42 0.37 0.31</div></div>
+<div style="margin-top:1.5rem"><div class="mono-sm" style="color:var(--muted)">LOCATION</div><div class="mono-sm" style="color:var(--accent)">> EARTH_01<br>> REMOTE</div></div>
+</div>
+<div>
+<div class="huge">Developer.<br>Engineer.<br>Problem Solver.<span class="cursor"></span></div>
+<div style="margin-top:1.5rem;color:var(--muted);max-width:560px;line-height:1.6">>_ HELLO, I'M NISADU. I BUILD SCALABLE WEB APPS, DEVELOPER TOOLS, AND DIGITAL EXPERIENCES. Currently Computer Science @ University of Sri Jayewardenepura.</div>
+</div>
+</div>
+
+<div class="stats">
+<div class="stat"><div class="val">04+</div><div class="mono-sm" style="color:var(--muted)">YEARS OF CODE</div></div>
+<div class="stat"><div class="val">05+</div><div class="mono-sm" style="color:var(--muted)">PROJECTS BUILT</div></div>
+<div class="stat"><div class="val">3+</div><div class="mono-sm" style="color:var(--muted)">TECH STACKS</div></div>
+<div class="stat"><div class="val">08+</div><div class="mono-sm" style="color:var(--muted)">TECHNOLOGIES</div></div>
+<div class="stat last"><div class="mono-sm">$ whoami<br>> noir@lab:~# cat bio.txt<br>PASSIONATE DEVELOPER WITH A FOCUS ON CRAFTING CLEAN, EFFICIENT, AND IMPACTFUL SOFTWARE SOLUTIONS.<br>>_ <span class="cursor" style="width:8px;height:1em"></span></div></div>
+</div>
+
+<div class="projects">
+<div><div class="mono-sm" style="padding:1rem;display:flex;justify-content:space-between"><span>FEATURED PROJECTS</span><span style="color:var(--accent)">>_ VIEW ALL</span></div>
+<div class="proj-card"><div class="proj-img">📝</div><div><div style="font-weight:700">AI NOTES SUMMARIZER</div><div class="mono-sm" style="color:var(--muted);margin-top:0.3rem">Flutter app that captures notes via OCR and summarises with Gemini 2.5 Flash.</div><div class="tags">FLUTTER, GEMINI API, ML KIT</div></div></div>
+<div class="proj-card"><div class="proj-img">✈️</div><div><div style="font-weight:700">AIRLINE RESERVATION</div><div class="mono-sm" style="color:var(--muted);margin-top:0.3rem">Java-based airline booking system with database integration.</div><div class="tags">JAVA, JAVAFX, JDBC</div></div></div>
+<div class="proj-card"><div class="proj-img">🍛</div><div><div style="font-weight:700">FOOD ORDERING SYSTEM</div><div class="mono-sm" style="color:var(--muted);margin-top:0.3rem">Full Java stack application for managing online food orders.</div><div class="tags">JAVA, LINKED-LIST, MERGE SORT</div></div></div>
+</div>
+<div class="skills">
+<div class="mono-sm" style="margin-bottom:1rem">TECH STACK</div>
+<div class="skill-group"><h4>_LANGUAGES</h4><div class="mono-sm" style="color:var(--accent)">JAVASCRIPT, JAVA, DART, PHP, PYTHON, SQL</div></div>
+<div class="skill-group"><h4>_FRAMEWORKS</h4><div class="mono-sm" style="color:var(--accent)">FLUTTER, REACT, VITE, JAVAFX, NODE</div></div>
+<div class="skill-group"><h4>_MOBILE</h4><div class="mono-sm" style="color:var(--accent)">FLUTTER, DART, GEMINI API, GOOGLE ML KIT</div></div>
+<div class="skill-group"><h4>_FRONTEND</h4><div class="mono-sm" style="color:var(--accent)">REACT, JAVASCRIPT, HTML5, CSS3, VITE</div></div>
+<div class="skill-group"><h4>_TOOLS</h4><div class="mono-sm" style="color:var(--accent)">GIT, GITHUB, VS CODE, FIGMA, XAMPP</div></div>
+<div style="margin-top:2rem;padding:1rem;border:1px solid var(--line)"><div class="mono-sm">EDUCATION — BSc Computer Science — University of Sri Jayewardenepura — 2024-Present</div></div>
+</div>
+</div>
+
+<div class="cta"><div class="mono-sm">LET'S BUILD SOMETHING EXTRAORDINARY TOGETHER. — nisadu2003@gmail.com</div><button class="btn">>_ Get In Touch</button></div>
+<div style="padding:0.8rem 1.5rem;display:flex;justify-content:space-between" class="mono-sm"><span>© 2024 NOIR LAB — Nisadu Nimsitha — All Rights Reserved</span><span style="color:var(--muted)">GITHUB / LINKEDIN / EMAIL</span></div>
+</div>
+</body>
+</html>

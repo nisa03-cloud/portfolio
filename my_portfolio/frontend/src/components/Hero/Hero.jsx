@@ -54,7 +54,6 @@ export default function Hero() {
           Available for work · {OWNER.title} · {OWNER.university}
         </p>
 
-        {/* Aurora headline with TypeWriter */}
         <h1 className={styles.name}>
           <TypeWriter text={FIRST} delay={300} />
           <br />
@@ -96,7 +95,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Avatar Glass Card */}
       <div className={styles.avatarWrap}>
         <div className={styles.ring1} />
         <div className={styles.ring2} />

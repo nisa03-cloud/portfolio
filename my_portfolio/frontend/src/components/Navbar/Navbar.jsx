@@ -34,7 +34,6 @@ export default function Navbar({ theme, toggleTheme }) {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
-        {/* Logo */}
         <span
           className={styles.logo}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -42,7 +41,6 @@ export default function Navbar({ theme, toggleTheme }) {
           N<span className={styles.dot}>.</span>
         </span>
 
-        {/* Desktop links + theme */}
         <div className={styles.links}>
           {NAV_LINKS.map((n) => (
             <button
@@ -63,7 +61,6 @@ export default function Navbar({ theme, toggleTheme }) {
           </button>
         </div>
 
-        {/* Mobile right side */}
         <div className={styles.mobileRight}>
           <button
             className={styles.themeBtn}
@@ -84,7 +81,6 @@ export default function Navbar({ theme, toggleTheme }) {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {NAV_LINKS.map((n) => (

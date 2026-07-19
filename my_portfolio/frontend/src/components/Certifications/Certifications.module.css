@@ -58,12 +58,8 @@
   box-shadow: 0 20px 60px rgba(0,0,0,0.32);
 }
 
-.card:hover::before {
-  opacity: 1;
-}
-.card:hover::after {
-  opacity: 1;
-}
+.card:hover::before { opacity: 1; }
+.card:hover::after { opacity: 1; }
 
 .top {
   display: flex;
@@ -162,14 +158,4 @@
   border-color: var(--text) !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(255,255,255,0.12);
-}
-
-/* Light theme adjustments */
-:global([data-theme="light"]) .card {
-  background: rgba(255,255,255,0.7);
-  border-color: rgba(0,0,0,0.06);
-}
-
-:global([data-theme="light"]) .icon {
-  background: rgba(0,0,0,0.04);
 }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept A — Paper & Ink — Nisadu Nimsitha</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Geist+Mono:wght@400&display=swap');
+:root{--paper:#FAF8F5;--ink:#111;--muted:#6B6560;--line:#E8E0D5;--accent:#FF4D2E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+.mono{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase}
+nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:0 2rem;height:56px}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{color:var(--ink);text-decoration:none;letter-spacing:0.12em}
+.location{border-left:1px solid var(--line);padding-left:1.5rem;margin-left:1.5rem;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.2fr 0.8fr;border-bottom:1px solid var(--line);min-height:78vh}
+.hero-left{padding:4rem 3rem 3rem 2rem;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line)}
+.bigname{font-family:'Instrument Serif',serif;font-size:clamp(4rem,9vw,8.5rem);line-height:0.9;letter-spacing:-0.03em}
+.bigname .line{display:block}
+.meta-row{display:flex;gap:1.5rem;align-items:center;margin-top:2rem}
+.meta-row .dash{width:48px;height:1px;background:var(--ink)}
+.hero-right{padding:2rem;display:flex;flex-direction:column;gap:2rem;background:#F2EEE9}
+.photo-wrap{width:100%;aspect-ratio:1/1.05;background:#ddd;overflow:hidden;position:relative}
+.photo-wrap img{width:100%;height:100%;object-fit:cover;filter:grayscale(0.2)}
+.badge{position:absolute;bottom:12px;left:12px;background:var(--paper);border:1px solid var(--line);padding:6px 10px}
+.hero-desc{font-size:13px;line-height:1.7;color:var(--muted);max-width:360px}
+.link-arrow{margin-top:1rem;display:inline-flex;gap:0.6rem;align-items:center;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px}
+.section-label{padding:1.2rem 2rem;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.projects-list{border-bottom:1px solid var(--line)}
+.project-row{display:grid;grid-template-columns:80px 1fr 160px 80px;border-bottom:1px solid var(--line);padding:1.6rem 2rem;align-items:center;transition:.2s}
+.project-row:hover{background:var(--ink);color:var(--paper)}
+.project-row:hover .mono{color:var(--paper);opacity:0.6}
+.num{font-family:'Instrument Serif',serif;font-size:1.6rem}
+.ptitle{font-family:'Instrument Serif',serif;font-size:1.9rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.about-left{padding:3rem 2rem;border-right:1px solid var(--line)}
+.about-left h2{font-family:'Instrument Serif',serif;font-size:3rem;line-height:1.05;margin-top:1rem}
+.about-right{padding:3rem 2rem}
+.about-right p{font-size:15px;line-height:1.8;color:var(--muted);margin-bottom:1.2rem}
+.stats{display:flex;gap:2.5rem;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--line)}
+.stat-val{font-family:'Instrument Serif',serif;font-size:2.2rem}
+.edu-card{display:flex;justify-content:space-between;padding:2rem;border-bottom:1px solid var(--line)}
+.skills{padding:2.5rem 2rem;display:flex;flex-wrap:wrap;gap:1.2rem;border-bottom:1px solid var(--line)}
+.skill-pill{border:1px solid var(--line);padding:0.5rem 1rem;border-radius:100px;display:flex;align-items:center;gap:0.5rem;font-size:13px}
+.contact{display:grid;grid-template-columns:1fr 1fr}
+.contact-left{padding:3rem 2rem;border-right:1px solid var(--line)}
+.contact-right{padding:3rem 2rem}
+.input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);padding:0.9rem 0;outline:none;font-family:'Inter';margin-bottom:1.2rem}
+.btn-dark{background:var(--ink);color:var(--paper);border:none;padding:0.9rem 1.8rem;font-family:'Geist Mono';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer}
+footer{padding:1.2rem 2rem;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.project-row{grid-template-columns:60px 1fr 30px}.project-row span:nth-child(3){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="mono">Paper & Ink ● Portfolio Concept A</div><div style="display:flex;align-items:center"><div class="nav-links mono"><a href="#">Work</a><a href="#">About</a><a href="#">Journal</a><a href="#">Contact</a></div><div class="mono location">● Colombo, LK</div></div></nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <div><div class="bigname"><span class="line">Nisadu</span><span class="line">Nimsitha</span></div>
+    <div class="meta-row mono"><div class="dash"></div><span>Undergraduate Student &<br>Creative Thinker</span></div></div>
+    <div><div class="mono" style="color:#999;margin-bottom:1rem;">Available for internships 2026</div><a href="#" style="display:inline-block;background:var(--ink);color:var(--paper);padding:0.8rem 1.4rem;text-decoration:none" class="mono">View Projects →</a></div>
+  </div>
+  <div class="hero-right">
+    <div class="photo-wrap"><img src="../my_portfolio/frontend/public/Nisadu.jpeg" onerror="this.style.background='#999'" alt=""><div class="badge mono">University of Sri Jayewardenepura<br>Computer Science</div></div>
+    <div><div class="mono" style="margin-bottom:0.8rem">Hello, I'm Nisadu.</div><div class="hero-desc">I'm a Computer Science student at the University of Sri Jayewardenepura, with a genuine passion for coding and technology. I love turning ideas into real, working software that people can actually use.</div><a class="link-arrow mono" href="#">Read More →</a></div>
+  </div>
+</div>
+
+<div class="section-label mono"><span>Selected Work — 05 projects</span><span>2024 — Present</span></div>
+<div class="projects-list">
+  <div class="project-row"><span class="num">01</span><span class="ptitle">AI Notes Summarizer</span><span class="mono">Flutter · Gemini API</span><span class="mono">→</span></div>
+  <div class="project-row"><span class="num">02</span><span class="ptitle">Airline Reservation System</span><span class="mono">Java · JavaFX · JDBC</span><span class="mono">→</span></div>
+  <div class="project-row"><span class="num">03</span><span class="ptitle">Food Ordering System</span><span class="mono">Java · Linked List</span><span class="mono">→</span></div>
+  <div class="project-row"><span class="num">04</span><span class="ptitle">Travel Planner</span><span class="mono">React · Node · Leaflet</span><span class="mono">→</span></div>
+  <div class="project-row"><span class="num">05</span><span class="ptitle">Inventory Manager</span><span class="mono">PHP · MySQL</span><span class="mono">→</span></div>
+</div>
+
+<div class="about-grid">
+  <div class="about-left"><div class="mono">01 — About</div><h2>Crafting experiences<br>with intention.</h2><div class="stats"><div><div class="stat-val">4+</div><div class="mono" style="margin-top:0.2rem;color:var(--muted)">Projects</div></div><div><div class="stat-val">3+</div><div class="mono" style="margin-top:0.2rem;color:var(--muted)">Tech Stacks</div></div></div></div>
+  <div class="about-right"><p>I'm a Computer Science student at the University of Sri Jayewardenepura, with a genuine passion for coding and technology. I love turning ideas into real, working software that people can actually use.</p><p>From mobile apps to full-stack web experiences, I enjoy the entire process of building — designing the interface, writing the logic, and seeing it all come together. I'm always exploring new technologies and pushing my skills further.</p><p>Open to internships, collaborations, and interesting conversations.</p></div>
+</div>
+
+<div class="section-label mono"><span>Education</span><span>Timeline</span></div>
+<div class="edu-card"><div><div style="font-family:'Instrument Serif';font-size:1.5rem">BSc in Computer Science</div><div class="mono" style="margin-top:0.3rem">University of Sri Jayewardenepura — Nugegoda, Sri Lanka</div></div><div class="mono">2024 — Present</div></div>
+<div class="edu-card"><div><div style="font-family:'Instrument Serif';font-size:1.4rem">G.C.E Advanced Level — Ananda College</div><div class="mono" style="margin-top:0.3rem">Mathematics - C, Physics - C, Chemistry - B</div></div><div class="mono">2020-2022</div></div>
+
+<div class="section-label mono"><span>Technical Toolkit</span><span>Flutter / React / Java / PHP</span></div>
+<div class="skills"><span class="skill-pill">Flutter</span><span class="skill-pill">Dart</span><span class="skill-pill">React</span><span class="skill-pill">JavaScript</span><span class="skill-pill">HTML5</span><span class="skill-pill">CSS3</span><span class="skill-pill">PHP</span><span class="skill-pill">Python</span><span class="skill-pill">MySQL</span><span class="skill-pill">Java</span><span class="skill-pill">Git</span><span class="skill-pill">GitHub</span></div>
+
+<div class="contact">
+  <div class="contact-left"><div class="mono" style="margin-bottom:1rem">05 — Contact</div><div style="font-family:'Instrument Serif';font-size:3rem;line-height:1">Let's Build<br>Something.</div><div style="margin-top:2rem" class="mono">Email — nisadu2003@gmail.com<br>GitHub — github.com/nisa2003-ops<br>LinkedIn — linkedin.com/in/nisadu</div></div>
+  <div class="contact-right"><div class="mono" style="margin-bottom:1.5rem">Send a message</div><input class="input" placeholder="Your name"><input class="input" placeholder="your@email.com"><input class="input" placeholder="What's on your mind?"><br><br><button class="btn-dark">Send Message →</button></div>
+</div>
+
+<footer class="mono"><span>© 2024 Paper & Ink — Nisadu Nimsitha</span><span>All Rights Reserved ● LinkedIn Instagram Email</span></footer>
+</body>
+</html>
