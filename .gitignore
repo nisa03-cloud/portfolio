@@ -1,0 +1,6 @@
+# Build and tool artifacts
+node_modules/
+dist/
+.DS_Store
+.vercel
+.cache

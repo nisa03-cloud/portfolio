@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concept D — Monochrome Studio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200;9..144,400;9..144,600&family=General+Sans:wght@400&family=Geist+Mono:wght@300&display=swap');
+:root{--bg:#0F0F10;--surf:#1A1A1B;--line:#2A2A2B;--line-accent:rgba(199,178,153,0.18);--text:#F5F3EF;--muted:#9A958E;--accent:#C7B299}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'General Sans',sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{border-bottom:1px solid var(--line-accent);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.mono{font-family:'Geist Mono';font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
+.nav-center{font-family:'Fraunces';letter-spacing:0.2em;font-size:0.9rem;color:var(--accent);text-align:center}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:72vh;border-bottom:1px solid var(--line-accent)}
+.hero-left{padding:4rem 3rem 3rem 2rem;display:flex;flex-direction:column;justify-content:center}
+.label{display:flex;align-items:center;gap:0.6rem;margin-bottom:2rem}
+.label i{width:6px;height:6px;background:var(--accent);transform:rotate(45deg);display:inline-block}
+.title{font-family:'Fraunces';font-size:clamp(3rem,7vw,5.8rem);line-height:0.9;font-weight:200;letter-spacing:-0.03em}
+.title b{font-weight:600;color:var(--text)}
+.sub{color:var(--muted);margin-top:1.6rem;line-height:1.7;font-size:14px;max-width:360px}
+.cta{margin-top:2rem;display:inline-flex;gap:0.8rem;align-items:center;text-decoration:none;color:var(--accent);border-bottom:1px solid var(--line-accent);padding-bottom:6px}
+.hero-right{position:relative;overflow:hidden;border-left:1px solid var(--line-accent)}
+.hero-right img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right, var(--bg) 0%, transparent 30%)}
+.projects-bar{border-bottom:1px solid var(--line-accent);padding:1rem 2rem;display:flex;justify-content:space-between}
+.scroll{display:flex;overflow-x:auto;scrollbar-width:none;gap:0;border-bottom:1px solid var(--line-accent)}
+.scroll::-webkit-scrollbar{display:none}
+.p-card{min-width:360px;border-right:1px solid var(--line-accent);position:relative;overflow:hidden}
+.p-card img{width:100%;height:420px;object-fit:cover;filter:grayscale(0.8);transition:0.6s}
+.p-card:hover img{filter:grayscale(0);transform:scale(1.03)}
+.p-info{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);color:var(--text)}
+.p-info .num{font-family:'Fraunces';font-size:0.9rem;opacity:0.7}
+.p-info .pt{font-family:'Fraunces';font-size:1.6rem;margin-top:0.4rem}
+.p-info .cat{margin-top:0.3rem}
+.about{display:grid;grid-template-columns:1fr 2fr;gap:0;border-bottom:1px solid var(--line-accent)}
+.about-side{padding:2.5rem;border-right:1px solid var(--line-accent)}
+.about-main{padding:2.5rem}
+.about-main h2{font-family:'Fraunces';font-size:2.4rem;font-weight:300;line-height:1.1}
+.about-main p{margin-top:1.2rem;color:var(--muted);line-height:1.8;font-size:14px;max-width:560px}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line-accent)}
+.skill-col{padding:1.8rem;border-right:1px solid var(--line-accent)}
+.skill-col h4{color:var(--accent);margin-bottom:1rem}
+.skill-col div{color:var(--muted);font-size:13px;line-height:2}
+.contact{display:grid;grid-template-columns:1fr 1fr}
+.contact-left{padding:3rem 2rem;border-right:1px solid var(--line-accent)}
+.contact-left .big{font-family:'Fraunces';font-size:3rem;font-weight:200;margin-top:1rem}
+.contact-right{padding:3rem 2rem}
+.input{width:100%;background:var(--surf);border:1px solid var(--line);padding:0.9rem 1rem;color:var(--text);outline:none;margin-bottom:1rem;font-family:'General Sans'}
+.btn{border:1px solid var(--accent);background:transparent;color:var(--accent);padding:0.8rem 1.4rem;font-family:'Geist Mono';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer}
+.btn:hover{background:var(--accent);color:var(--bg)}
+footer{padding:1rem 2rem;display:flex;justify-content:space-between}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.p-card{min-width:280px}}
+</style>
+</head>
+<body>
+<nav><div class="mono">Studio — Colombo / LK</div><div class="nav-center">MONOCHROME<br>STUDIO</div><div class="mono">Journal &nbsp; Contact &nbsp; ●</div></nav>
+
+<div class="hero">
+<div class="hero-left"><div class="label mono"><i></i>Welcome to</div><div class="title">Crafting<br><b>Experiences</b><br>with purpose.</div><div class="sub">I'm Nisadu Nimsitha — Computer Science student at University of Sri Jayewardenepura. I love turning ideas into real, working software that people can actually use. From mobile apps to full-stack web experiences.</div><a class="cta mono" href="#">View Selected Work <span style="margin-left:0.5rem">→</span></a><div style="margin-top:3rem;display:flex;gap:2rem"><div><div class="mono" style="color:var(--accent)">01 / 06</div><div class="mono" style="margin-top:0.5rem">Scroll horizontally<br>to explore projects</div></div></div></div>
+<div class="hero-right"><img src="../my_portfolio/frontend/public/Nisadu.jpeg" alt="Nisadu"></div>
+</div>
+
+<div class="projects-bar mono"><span>Selected Work — Horizontal Scroll</span><span style="color:var(--accent)">← → Drag</span></div>
+<div class="scroll">
+<div class="p-card"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600" alt=""><div class="p-info"><div class="num">01</div><div class="pt">AI Notes<br>Summarizer</div><div class="mono cat">Flutter · Gemini API</div></div></div>
+<div class="p-card"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=600" alt=""><div class="p-info"><div class="num">02</div><div class="pt">Airline<br>Reservation</div><div class="mono cat">JavaFX · JDBC</div></div></div>
+<div class="p-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600" alt=""><div class="p-info"><div class="num">03</div><div class="pt">Food Ordering<br>System</div><div class="mono cat">Java · Data Structures</div></div></div>
+<div class="p-card"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=600" alt=""><div class="p-info"><div class="num">04</div><div class="pt">Travel<br>Planner</div><div class="mono cat">React · Leaflet · Gemini</div></div></div>
+<div class="p-card"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600" alt=""><div class="p-info"><div class="num">05</div><div class="pt">Inventory<br>Manager</div><div class="mono cat">PHP · MySQL · CRUD</div></div></div>
+</div>
+
+<div class="about">
+<div class="about-side"><div class="mono">01 — About</div><div style="margin-top:2rem"><div style="font-family:'Fraunces';font-size:2rem;color:var(--accent)">4+</div><div class="mono">Projects</div></div><div style="margin-top:1.5rem"><div style="font-family:'Fraunces';font-size:2rem;color:var(--accent)">3+</div><div class="mono">Tech Stacks</div></div></div>
+<div class="about-main"><h2>Crafting experiences<br>with intention.</h2><p>I'm a Computer Science student at the University of Sri Jayewardenepura, with a genuine passion for coding and technology. I love turning ideas into real, working software that people can actually use.</p><p>From mobile apps to full-stack web experiences, I enjoy the entire process of building — designing the interface, writing the logic, and seeing it all come together. I'm always exploring new technologies and pushing my skills further.</p></div>
+</div>
+
+<div class="skills-grid">
+<div class="skill-col"><h4 class="mono">Mobile</h4><div>Flutter<br>Dart<br>Gemini API<br>ML Kit</div></div>
+<div class="skill-col"><h4 class="mono">Frontend</h4><div>React<br>JavaScript<br>HTML5<br>CSS3<br>Vite</div></div>
+<div class="skill-col"><h4 class="mono">Backend</h4><div>PHP<br>Python<br>MySQL<br>Java<br>JavaFX</div></div>
+<div class="skill-col"><h4 class="mono">Tools</h4><div>Git<br>GitHub<br>VS Code<br>Figma<br>R</div></div>
+</div>
+
+<div class="contact">
+<div class="contact-left"><div class="mono">05 — Contact</div><div class="big">Let's Build<br>Something.</div><div class="mono" style="margin-top:2rem;line-height:2">Email — nisadu2003@gmail.com<br>GitHub — github.com/nisa2003-ops<br>LinkedIn — linkedin.com/in/nisadu</div></div>
+<div class="contact-right"><div class="mono" style="margin-bottom:1.5rem">Send a message</div><input class="input" placeholder="Your name"><input class="input" placeholder="your@email.com"><textarea class="input" rows="4" placeholder="What's on your mind?"></textarea><button class="btn" style="width:100%;margin-top:0.5rem">Send Message →</button></div>
+</div>
+
+<footer class="mono"><span>© 2024 Monochrome Studio — Nisadu Nimsitha</span><span>All Rights Reserved ● LinkedIn Instagram Email</span></footer>
+</body>
+</html>
